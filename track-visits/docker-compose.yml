@@ -1,0 +1,4 @@
+version: '3' #version of docker-compose we are trying to use with this formatted file right now
+services:
+  redis-server:
+    image: 'redis'
