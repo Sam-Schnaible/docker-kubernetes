@@ -3,7 +3,7 @@ services: # like saying "build these containers" not actual containers though, k
   redis-server: # first container to build
     image: 'redis' # use redis image
   node-app: # second container to build
-    restart: always #specifies the always restart policy for our node app container
+    restart: on-failure #specifies the always restart policy for our node app container
     build: . #use dockerfile in current directory
     ports: # specify ports to map
       - "4001:8081" # a - in a .yml (yamel) file is how we specify an array
